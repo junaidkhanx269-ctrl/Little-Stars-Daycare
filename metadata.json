@@ -1,0 +1,6 @@
+{
+  "name": "Little Stars Daycare",
+  "description": "Licensed home daycare by Rachel J. Tineo in Fordham Manor, Bronx. A safe, loving environment where little stars shine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
