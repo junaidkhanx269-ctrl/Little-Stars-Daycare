@@ -22,24 +22,24 @@ import {
   Menu,
   Heart,
   Smile,
-  CheckCircle2,
-  Coffee
+  CheckCircle2
 } from 'lucide-react';
 
-// Daycare information constants
+// Daycare information constants updated with precise local neighborhood details
 const DAYCARE_INFO = {
-  name: "Little Stars Daycare",
+  name: "Little Stars FamilyDaycare",
   owner: "Rachel J. Tineo",
-  address: "2395 Tiebout Avenue #1-a, Bronx, NY 10458",
+  address: "2395 Tiebout Ave apt 1a, Bronx, NY 10458",
   phone: "(646) 620-0119",
   phoneLink: "tel:+16466200119",
   license: "Licensed #875410",
   subsidy: "Accepts Subsidy",
   hours: "Mon - Fri: 7:30 AM - 6:00 PM",
-  mapsLink: "https://www.google.com/maps/search/?api=1&query=2395+Tiebout+Avenue+%231-a+Bronx+NY+10458"
+  mapsLink: "https://www.google.com/maps/search/?api=1&query=2395+Tiebout+Avenue+apt+1a+Bronx+NY+10458",
+  locationDetails: "Conveniently located in the Bronx Fordham Road area on Tiebout Ave (near Valentine Ave), situated between E 183rd and E 188th Street. Extremely accessible by public transit with easy street parking."
 };
 
-// 6 Uploaded Images with direct URLs and details
+// 9 Real Uploaded Images with direct URLs and details
 const IMAGES = [
   {
     id: 1,
@@ -76,6 +76,24 @@ const IMAGES = [
     url: "https://i.ibb.co/MydwdXDy/IMG-6436.jpg",
     caption: "Play Area Near Park",
     description: "Our daily reading circle time where children listen to stories, develop vocabulary, and build healthy social connections."
+  },
+  {
+    id: 7,
+    url: "https://i.ibb.co/nMvnqQGT/df5a2cde-e267-4b3d-b57a-41e59f3f08e7.jpg",
+    caption: "Sunny Play Room",
+    description: "An airy, fully carpeted, and childproofed play area loaded with building blocks, puzzles, and interactive developmental toys."
+  },
+  {
+    id: 8,
+    url: "https://i.ibb.co/xSN6GDF3/c51f95ab-0f84-4521-a7a8-0f27ae5e4b95.jpg",
+    caption: "Learning & Activities Setup",
+    description: "Our curated educational table featuring custom toddler activity books, child-safe learning tools, and developmental puzzles."
+  },
+  {
+    id: 9,
+    url: "https://i.ibb.co/RkQTrQr7/2fd7eda6-30c9-4243-aeb0-8d4fa3d032cd.jpg",
+    caption: "Cozy Resting Area",
+    description: "A warm, nurturing corner equipped with soft pillows, child-sized recliners, and educational storybooks for quiet time and relaxation."
   }
 ];
 
@@ -221,7 +239,7 @@ export default function App() {
                   <Star className="w-5 h-5 text-amber-800 fill-amber-800" />
                 </div>
                 <span className="text-xl font-bold tracking-tight text-slate-900 font-serif">
-                  Little Stars <span className="text-[#6BCB77]">Daycare</span>
+                  Little Stars <span className="text-[#6BCB77]">FamilyDaycare</span>
                 </span>
               </a>
             </div>
@@ -309,7 +327,7 @@ export default function App() {
                 Book Free Tour
               </a>
               <div className="text-center text-xs text-stone-500 font-medium pt-2">
-                Licensed Home Daycare · Accepts Subsidy
+                Licensed Family Daycare · Accepts Subsidy
               </div>
             </div>
           </div>
@@ -322,7 +340,7 @@ export default function App() {
         <div className="absolute inset-0">
           <img 
             src="https://i.ibb.co/TMRJsm3H/IMG-6441.jpg" 
-            alt="Little Stars Daycare Classroom" 
+            alt="Little Stars FamilyDaycare Classroom" 
             className="w-full h-full object-cover object-center transform scale-105 filter blur-[1px]"
             referrerPolicy="no-referrer"
           />
@@ -357,7 +375,7 @@ export default function App() {
           </h1>
 
           <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-stone-200 font-medium leading-relaxed">
-            Licensed Home Daycare at <span className="text-white underline decoration-[#FFD93D] decoration-2 underline-offset-4">2395 Tiebout Ave</span> | Gated Entrance | Nap Room | Art & Reading Area
+            Licensed Home Daycare at <span className="text-white underline decoration-[#FFD93D] decoration-2 underline-offset-4">2395 Tiebout Ave apt 1a</span> | Gated Entrance | Nap Room | Art & Reading Area
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -406,10 +424,10 @@ export default function App() {
                 <img src={IMAGES[0].url} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-200">
-                <img src={IMAGES[2].url} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src={IMAGES[6].url} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-200">
-                <img src={IMAGES[4].url} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src={IMAGES[7].url} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
             </div>
             <span className="text-sm font-semibold text-amber-900 flex items-center gap-1.5">
@@ -455,13 +473,13 @@ export default function App() {
 
             <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
               <p>
-                Welcome to Little Stars! As a licensed provider in the Bronx, my mission is to provide a safe, warm, and loving environment that stimulates early learning and self-confidence.
+                Welcome to Little Stars FamilyDaycare! As a licensed provider in the Bronx, my mission is to provide a safe, warm, and loving environment that stimulates early learning, fine motor skills, and self-confidence.
               </p>
               <p className="font-medium text-slate-800">
                 We balance safety, education, and fun in a clean gated home with dedicated nap room, art area, and reading corner. Family neighborhood with park nearby, street parking.
               </p>
-              <p>
-                In our home daycare, your child is not just a student; they are part of our family. We maintain a small cohort size to ensure every little star gets the focused attention they need during these crucial early developmental years.
+              <p className="text-sm bg-amber-50 border border-amber-200/50 rounded-2xl p-4 text-amber-950 font-medium leading-relaxed">
+                📍 <strong>Neighborhood Accessibility:</strong> We are perfectly located in the <strong>Bronx Fordham Road area</strong> on <strong>Tiebout Ave</strong> (right off Valentine Ave), comfortably nestled between <strong>E 183rd and E 188th Street</strong>. It's a wonderful, safe community environment where children feel secure and parents find pickup/drop-off simple and fast.
               </p>
             </div>
 
@@ -541,7 +559,7 @@ export default function App() {
           </p>
         </div>
 
-        {/* 6 Image Grid */}
+        {/* 9 Image Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {IMAGES.map((img, index) => (
@@ -576,7 +594,7 @@ export default function App() {
                       {img.description}
                     </p>
                   </div>
-                  <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">
+                  <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded shrink-0">
                     Photo {img.id}
                   </span>
                 </div>
@@ -659,7 +677,7 @@ export default function App() {
             Premium Features
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
-            Why Little Stars Daycare?
+            Why Little Stars FamilyDaycare?
           </h2>
           <p className="max-w-2xl mx-auto text-slate-600 text-sm sm:text-base">
             We provide a licensed, clean, home environment specifically arranged to meet NYS childcare safety and early education standards.
@@ -1262,9 +1280,18 @@ export default function App() {
                     </div>
                     <div>
                       <p className="text-xs font-bold text-stone-400 uppercase tracking-wider">Daycare Address</p>
-                      <p className="text-sm font-semibold text-slate-800 mt-0.5">{DAYCARE_INFO.address}</p>
-                      <p className="text-xs text-stone-500 mt-0.5">Fordham Manor, Bronx NY</p>
+                      <p className="text-sm font-bold text-slate-950 mt-0.5">{DAYCARE_INFO.address}</p>
+                      <p className="text-xs text-stone-500 mt-0.5">Fordham Road & Tiebout Ave, Bronx NY</p>
                     </div>
+                  </div>
+
+                  {/* Neighborhood highlights */}
+                  <div className="bg-[#FAF9F5] rounded-2xl p-4 border border-stone-200/50 space-y-1">
+                    <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#6BCB77] block">Local Neighborhood</span>
+                    <p className="text-xs text-slate-700 font-semibold">Tiebout Ave & Valentine Ave</p>
+                    <p className="text-[11px] text-stone-500 leading-relaxed">
+                      Conveniently nestled around E 183rd and E 188th Street. Ideal for local commuting families.
+                    </p>
                   </div>
 
                   {/* Phone */}
@@ -1289,7 +1316,7 @@ export default function App() {
                     <div>
                       <p className="text-xs font-bold text-stone-400 uppercase tracking-wider">State License ID</p>
                       <p className="text-sm font-semibold text-slate-800 mt-0.5">{DAYCARE_INFO.license}</p>
-                      <p className="text-xs text-[#6BCB77] font-semibold mt-0.5">Registered & Regulated Daycare</p>
+                      <p className="text-xs text-[#6BCB77] font-semibold mt-0.5">Registered & Regulated Family Daycare</p>
                     </div>
                   </div>
 
@@ -1331,10 +1358,16 @@ export default function App() {
                     <div className="absolute top-0 bottom-0 right-1/4 w-10 bg-white transform -rotate-6" />
                   </div>
 
-                  {/* Nearby Park Marker */}
-                  <div className="absolute top-12 left-16 px-3 py-1 rounded bg-[#6BCB77]/20 border border-[#6BCB77]/40 text-emerald-800 text-[10px] font-bold flex items-center gap-1">
+                  {/* Nearby Valentine Ave Marker */}
+                  <div className="absolute top-12 left-12 px-3 py-1 rounded bg-[#6BCB77]/20 border border-[#6BCB77]/40 text-emerald-800 text-[10px] font-bold flex items-center gap-1">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#6BCB77]" />
-                    <span>Tiebout Park</span>
+                    <span>Valentine Ave</span>
+                  </div>
+
+                  {/* Nearby Fordham Road Marker */}
+                  <div className="absolute bottom-16 right-16 px-3 py-1 rounded bg-[#FFD93D]/20 border border-[#FFD93D]/40 text-amber-900 text-[10px] font-bold flex items-center gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#FFD93D]" />
+                    <span>Fordham Road</span>
                   </div>
 
                   {/* Daycare Pinned Marker */}
@@ -1347,21 +1380,21 @@ export default function App() {
                       </div>
                     </div>
                     <div className="mt-2 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md whitespace-nowrap">
-                      Little Stars Daycare
+                      Little Stars FamilyDaycare
                     </div>
                   </div>
 
                   {/* Compass/Grid details */}
                   <div className="absolute bottom-3 left-3 bg-white/80 backdrop-blur-sm rounded px-2 py-1 text-[9px] font-mono text-stone-500">
-                    2395 Tiebout Ave, Bronx NY
+                    2395 Tiebout Ave apt 1a, Bronx NY
                   </div>
                 </div>
 
                 {/* Footer overlay containing direct maps action */}
                 <div className="relative p-4 bg-white/95 backdrop-blur-sm border-t border-stone-200/60 z-10 flex justify-between items-center">
                   <div className="text-xs">
-                    <p className="font-bold text-slate-900">Fordham Manor Location</p>
-                    <p className="text-stone-500">Easy Bronx street parking</p>
+                    <p className="font-bold text-slate-900">Fordham / Tiebout Location</p>
+                    <p className="text-stone-500">Between E 183rd & 188th St</p>
                   </div>
                   <a 
                     href={DAYCARE_INFO.mapsLink}
@@ -1533,11 +1566,11 @@ export default function App() {
                   <Star className="w-4 h-4 text-amber-800 fill-amber-800" />
                 </div>
                 <span className="text-lg font-bold tracking-tight text-white font-serif">
-                  Little Stars Daycare
+                  Little Stars FamilyDaycare
                 </span>
               </div>
               <p className="text-xs text-stone-400 max-w-md leading-relaxed">
-                Licensed home daycare in Fordham Manor, Bronx, NY. We provide a clean, secure, CPR-certified home setting where infants, toddlers, and school-aged children thrive.
+                Licensed home daycare in the Bronx Fordham area. We provide a clean, secure, CPR-certified home setting on Tiebout Ave near Valentine Ave, around E 183rd and E 188th Street.
               </p>
               <div className="text-xs text-[#6BCB77] font-semibold">
                 NYS Licensed Daycare Provider · {DAYCARE_INFO.license}
@@ -1571,7 +1604,7 @@ export default function App() {
               <h5 className="text-sm font-bold text-white uppercase tracking-wider">Location & Contact</h5>
               <p className="text-xs text-stone-400 leading-relaxed">
                 {DAYCARE_INFO.address} <br />
-                Fordham Manor, Bronx NY
+                Tiebout Ave & Valentine Ave, Bronx NY
               </p>
               <p className="text-xs font-mono font-bold text-[#FFD93D] block">
                 Phone: {DAYCARE_INFO.phone}
@@ -1585,7 +1618,7 @@ export default function App() {
 
           <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-stone-500 gap-4">
             <div>
-              &copy; {new Date().getFullYear()} Little Stars Daycare. All rights reserved. Registered owner: {DAYCARE_INFO.owner}.
+              &copy; {new Date().getFullYear()} Little Stars FamilyDaycare. All rights reserved. Registered owner: {DAYCARE_INFO.owner}.
             </div>
             <div className="flex gap-4">
               <span>NYS Licensed Daycare #875410</span>

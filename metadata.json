@@ -1,6 +1,6 @@
 {
-  "name": "Little Stars Daycare",
-  "description": "Licensed home daycare by Rachel J. Tineo in Fordham Manor, Bronx. A safe, loving environment where little stars shine.",
+  "name": "Little Stars FamilyDaycare",
+  "description": "Licensed home daycare by Rachel J. Tineo in the Fordham Road area of Bronx. A safe, loving environment on Tiebout Ave near Valentine Ave, between 183rd and 188th Street.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
